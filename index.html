@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ============ REMIX ICON ============ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- ============ STYLESHEET ============ -->
+    <link rel="stylesheet" href="assets/css/defaultPageDesign.css" />
+
+    <!-- ============ TITLE ============ -->
+    <title>Default Landing Page</title>
+  </head>
+
+  <body>
+    <!-- ============ HEADER ============ -->
+    <header class="header">
+        <div class="clinic__logo">
+            <img src="#" alt="" />
+            <h2 class="title__logo">Medical Clinic</h2>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <button class="hamburger lg:hidden" id="hamburgerBtn">
+            <i class="ri-menu-line text-3xl"></i>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav class="nav__con" id="navMenu">
+        
+            <!-- Close Button -->
+            <button class="close-btn lg:hidden" id="closeBtn">
+                <i class="ri-close-line"></i>
+            </button>
+
+            <ul class="nav__list" id="navList">
+                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">About Us</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Appointment</a>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Doctor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main">
+        <!-- ============ HOME ============ -->
+        <section class="home" id="home">
+            <div class="home__container pl-6 text-left max-w-xl">
+                <h1 class="section__title text-4xl font-extrabold leading-10 mb-5">We Care About<br>Your Health</h1>
+                <h4 class="section__description mt-4 text-base font-medium">
+                Your well-being is our priority. We provide trusted care, helpful resources, 
+                and a supportive environment to help you live a healthier, happier life.
+                </h4>
+                <button type="button" class="btn mt-6">Make Appointment</button>
+            </div>
+        </section>
+
+        <!-- ============ DEPARTMENT ============ -->
+        <section class="department" id="department">
+            <div class="department__container">
+                <div class="dept__box">
+                    <!-- Department Card 1 -->
+                    <div class="item__card flex items-center gap-4">
+                        <i class="ri-heart-pulse-fill text-5xl text-white"></i>
+                        <div class="text-left">
+                        <h2 class="text-xl font-semibold text-white">Cardiology</h2>
+                        <p class="text-sm text-white">Specializes in diagnosing and treating heart disorders and cardiovascular diseases.</p>
+                        </div>
+                    </div>
+
+                    <!-- Department Card 2 -->
+                    <div class="item__card flex items-center gap-4">
+                        <i class="ri-brain-line text-5xl text-white"></i>
+                        <div class="text-left">
+                        <h2 class="text-xl font-semibold text-white">Neurology</h2>
+                        <p class="text-sm text-white">Focused on disorders of the nervous system including brain, spine, and nerves.</p>
+                        </div>
+                    </div>
+
+                    <!-- Department Card 3 -->
+                    <div class="item__card flex items-center gap-4">
+                        <i class="ri-stethoscope-line text-5xl text-white"></i>
+                        <div class="text-left">
+                        <h2 class="text-xl font-semibold text-white">General Medicine</h2>
+                        <p class="text-sm text-white">Provides comprehensive primary care and health management for all ages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ DOCTOR ============ -->
+         <section class="doctor flex items-center justify-center h-[70vh]" id="doctor">
+            <div class="doctor__container">
+                <div class="info__box">
+                    <h1 class="section__title font-black">The Best Doctor<br>That You Can Trust!</h1>
+                    <h3 class="section__description mb-4 font-extralight">
+                        "Our team of highly skilled and compassionate doctors is committed to delivering the highest 
+                        standard of care. With years of experience, advanced medical training, and a patient-centered 
+                        approach, they work tirelessly to ensure your health and comfort come first. Whether it's a 
+                        routine check-up or specialized treatment, you can trust our doctors to provide accurate 
+                        diagnoses, clear communication, and personalized care tailored to your unique needs. 
+                        Your health is in expert hands.
+                    </h3>
+                    <button type="button" class="btn">Explore More!</button>
+                </div>
+                <div class="doctors__card">
+                    <img src="assets/media/doctor-img-one.jpg" alt="Doctor Image" />
+
+                    <div class="doctors__card-content">
+                        <h2 class="doctor__name">Dr. Luis Melchor Hermogenes</h2>
+                        <h4 class="doc__type">Orthopedic</h4>
+                        <p class="doctor__description">
+                        Meet Dr. Luis Melchor Hermogenes, a dedicated Orthopedic known for compassionate care and medical 
+                        expertise. Committed to your well-being, Dr. Hermogenes combines years of experience 
+                        with a personalized approach to help you feel your best.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ACCOUNT ============ -->
+        <section class="account" id="account">
+            <div class="account__container" role="main" aria-label="Authentication forms">
+                <div class="forms-wrapper">
+                    <!-- Sign In Form -->
+                    <form id="signInForm" aria-labelledby="signInHeading" novalidate>
+                        <h2 id="signInHeading">Sign In</h2>
+                        <div>
+                            <label for="signInEmail">Email</label>
+                            <input type="email" id="signInEmail" name="email" required />
+                            <div id="signInEmailError" class="error-message"></div>
+                        </div>
+                        <div>
+                            <label for="signInPassword">Password</label>
+                            <input type="password" id="signInPassword" name="password" required />
+                            <span class="show-password" id="toggleSignInPassword">Show</span>
+                            <div id="signInPasswordError" class="error-message"></div>
+                        </div>
+                        <div class="forgot-password"><a href="#" id="forgotPasswordLink">Forgot password?</a></div>
+                        <button type="submit" class="submit-btn">Sign In</button>
+                    </form>
+
+                    <!-- Sign Up Form -->
+                    <form id="signUpForm" aria-labelledby="signUpHeading" novalidate>
+                        <h2 id="signUpHeading">Sign Up</h2>
+                        <div>
+                            <label for="signUpEmail">Email</label>
+                            <input type="email" id="signUpEmail" name="email" required />
+                            <div id="signUpEmailError" class="error-message"></div>
+                        </div>
+                        <div>
+                            <label for="signUpPassword">Password</label>
+                            <input type="password" id="signUpPassword" name="password" required />
+                            <span class="show-password" id="toggleSignUpPassword">Show</span>
+                            <div id="signUpPasswordError" class="error-message"></div>
+                        </div>
+                        <div>
+                            <label for="signUpConfirmPassword">Confirm Password</label>
+                            <input type="password" id="signUpConfirmPassword" name="confirmPassword" required />
+                            <span class="show-password" id="toggleSignUpConfirmPassword">Show</span>
+                            <div id="signUpConfirmPasswordError" class="error-message"></div>
+                        </div>
+                        <button type="submit" class="submit-btn">Sign Up</button>
+                    </form>
+                </div>
+
+                <div class="color-panel" id="colorPanel">
+                    <h2 class="account__title" id="panelTitle">Welcome Back!</h2>
+                    <p class="message account__description" id="panelDescription">
+                        To stay connected with us, please log in using your personal info.
+                    </p>
+                    <a href="#" class="toggle-link" id="togglePanelLink">Create Account</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <!-- ============ TAILWIND CDN ============ -->
+     <script src="assets/js/toggleMenu.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
